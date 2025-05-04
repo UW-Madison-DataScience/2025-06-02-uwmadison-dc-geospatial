@@ -3,22 +3,23 @@ layout: workshop      # DON'T CHANGE THIS.
 # More detailed instructions (including how to fill these variables for an
 # online workshop) are available at
 # https://carpentries.github.io/workshop-template/customization/index.html
-venue: "UW-Madison"        # brief name of the institution that hosts the workshop without address (e.g., "Euphoric State University")
-address: "Orchard View Room, Discovery Building, 330 N Orchard St, Madison, WI 53715"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
+venue: "UW-Madisonnn"        # brief name of the institution that hosts the workshop without address (e.g., "Euphoric State University")
+address: "Ingraham Hall, Room 115, 1155 Observatory Dr, Madison, WI 53706"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
 country: "us"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) for the institution that hosts the workshop
 language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the workshop
 latitude: "45"        # decimal latitude of workshop venue (use https://www.latlong.net/)
 longitude: "-1"       # decimal longitude of the workshop venue (use https://www.latlong.net)
-humandate: "June 2-5, 2025"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+humandate: "June 3-6, 2024"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
 humantime: "1:00 pm - 5:00 pm"    # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
-startdate: 2025-06-02      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-enddate: 2025-06-05        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-instructor: ["Sarah Stevens", "TBD"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["Sarah Stevens", "TBD"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+startdate: 2024-06-03      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
+enddate: 2024-06-06        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
+instructor: ["Hayden Elza", "Sarah Stevens", "Cid Freitag", "Ana Wells"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+helper: ["Erwin Lares", "Chris Endemann" ,"Heather Shimon", "Anna Wells", "Sarah Stevens"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 email: ["facilitator@datascience.wisc.edu"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
-collaborative_notes: https://pad.carpentries.org/2025-06-02-uwmadison-dc-geospatial  # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
-eventbrite: 1207431222289          # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
+collaborative_notes: https://pad.carpentries.org/2024-06-03-uwmadison-dc  # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
+eventbrite: 891915522337          # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
+
 {% comment %} See instructions in the comments below for how to edit specific sections of this workshop template. {% endcomment %}
 
 {% comment %}
@@ -28,6 +29,12 @@ Edit the values in the block above to be appropriate for your workshop.
 If the value is not 'true', 'false', 'null', or a number, please use
 double quotation marks around the value, unless specified otherwise.
 And run 'make workshop-check' *before* committing to make sure that changes are good.
+{% endcomment %}
+
+
+{% comment %}
+8< ============= For a workshop delete from here =============
+8< ============================= until here ==================
 {% endcomment %}
 
 
@@ -66,16 +73,13 @@ displayed if the 'eventbrite' field in the header is not set.
 {% if page.eventbrite %}
 <strong>Some adblockers block the registration window. If you do not see the
   registration box below, please check your adblocker settings.</strong>
-<div id="eventbrite-widget-container"></div>
-<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
-<script type="text/javascript">
-    window.EBWidgets.createWidget({
-        // Required
-        widgetType: 'checkout',
-        eventId: {{page.eventbrite}},
-        iframeContainerId: 'eventbrite-widget-container',
-    });
-</script>
+<iframe
+  src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
+  frameborder="0"
+  width="100%"
+  height="280px"
+  scrolling="auto">
+</iframe>
 {% endif %}
 
 
